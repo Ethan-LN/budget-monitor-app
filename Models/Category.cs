@@ -17,5 +17,13 @@ namespace budget_monitor_app.Models
 
         [Column(TypeName = "nvarchar(10)")]
         public string Type { get; set; } = "Expense";
+
+        public string? TitleWidthIcon
+        { 
+            get
+            {
+                return this.Icon + " " + this.Title;
+            }
+           }
     }
 }
